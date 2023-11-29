@@ -1,0 +1,77 @@
+:root {
+    --fs-spectral: 'Spectral SC', serif;
+    --fs-sofia: 'Sofia Sans Extra Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    
+    color: white;
+    font-family: var(--fs-sofia);
+}
+
+main {
+    display: grid;
+    background-color: black;
+    background-image: url("assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.logo {
+    padding: 2rem;
+}
+
+.nav-burger {
+    display: grid;
+    position: absolute;
+    padding: 2rem;
+    justify-self: end;
+}
+
+
+.navlist {
+    display: none;
+    position: absolute;
+    padding: 2rem;
+    justify-self: end;
+    
+}
+
+.sotext {
+    justify-self: center;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+.space {
+    justify-self: center;
+    font-size: 5rem;
+    font-family: var(--fs-spectral);
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+p{
+    padding: 2rem;
+    justify-self: center;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    main {
+        background-color: black;
+        background-image: url("assets/home/background-home-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .nav-burger {
+        display: none;
+    }
+}
