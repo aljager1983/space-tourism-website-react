@@ -35,6 +35,7 @@ body {
 
 .logo {
   display: flex;
+  position: absolute;
   padding: 2.5rem 2rem;
   justify-content: 0rem;
 }
@@ -53,27 +54,34 @@ hr {
   background-color: hsla(244, 31%, 59%, 0.2);
   margin-top: 2rem;
   /* padding: 2rem 4rem 2rem 2rem; */
-  padding: 2.5rem 4.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2vw;
   justify-content: baseline;
-  gap: 5rem;
-  width: calc(50% - 9rem);   
+  column-gap: 3vw;
+  width: calc(50% - 2vw);   
   right: 0px;
-  /* backdrop-filter: blur(5px);  */
+  
+  -webkit-backdrop-filter: blur(5px); 
+  backdrop-filter: blur(5px);
+   
 }
 
 .navitems {
   display: flex;
   flex-direction: row;
-  border-bottom: solid 1px hsla(244, 75%, 40%, 0);
   letter-spacing: 2px;
-  gap: 3px;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
 }
+
 .navitems span {
   font-weight: 200;
   justify-content: space-between;
 }
 .navitems:hover {
-  border-bottom: solid 1px white;
+  /* border-bottom: solid 1px white; */
   cursor: pointer;
 }
 
@@ -81,3 +89,20 @@ hr {
   font-weight: bold;
 }
 
+.destination, .crew, .technology {
+  background-repeat: no-repeat;
+    background-position: absolute;
+    background-size: cover;
+    height: 100vh;
+}
+.destination {
+  background-image: url("assets/destination/background-destination-desktop.jpg");
+}
+
+.crew {
+  background-image: url("assets/crew/background-crew-desktop.jpg");
+}
+
+.technology {
+  background-image: url("assets/technology/background-technology-desktop.jpg");
+}
