@@ -17,64 +17,6 @@ body {
   font-family: var(--fs-sofia);
 }
 
-.home {
-    display: flex;
-    flex-direction: row;
-    background-image: url("assets/home/background-home-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: absolute;
-    background-size: cover;
-    height: 100vh;
-    justify-content: center;
-    text-align: justify;
-    align-items: center;
-    /* padding: 10vh 5vw; */
-}
-
-.home-right, .home-left {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  width: 50%;
-  flex-direction: column;
-  padding: 5rem 10rem 0 10rem;
-}
-
-.home-right {
-  align-items: center;
-}
-.home-left h1 {
-  font-size: 1.5rem;
-    letter-spacing: 2px;
-    font-weight: 300;
-    letter-spacing: 4px;
-}
-
-.home-left h2 {
-  font-family: var(--fs-cormo-garamon);
-  font-size: 7rem;
-  font-weight: 200;
-}
-
-.home-left p {
-  font-family: Arial, Helvetica, sans-serif;
-    font-size: .85rem;
-    line-height: 1.5rem;
-    font-weight: 200;
-}
-
-.home-right h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    color: black;
-    font-family: var(--fs-cormo-garamon);
-}
-
 
 .logo-icon {
   height: 5rem;
@@ -135,13 +77,70 @@ hr {
 .navitems .bold {
   font-weight: bold;
 }
-
-.destination, .crew, .technology {
+.home, .destination, .crew, .technology {
+  display: flex;
+  flex-direction: row;
   background-repeat: no-repeat;
-    background-position: absolute;
-    background-size: cover;
-    height: 100vh;
+  background-position: absolute;
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+  /* padding: 10vh 5vw; */
+ 
 }
+.home {
+    
+    background-image: url("assets/home/background-home-desktop.jpg");
+   
+}
+
+.home-right, .home-left {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+  flex-direction: column;
+  padding: 5rem 10rem 0 10rem;
+}
+
+.home-right {
+  align-items: center;
+}
+.home-left h1 {
+  font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.home-left h2 {
+  font-family: var(--fs-cormo-garamon);
+  font-size: 7rem;
+  font-weight: 200;
+}
+
+.home-left p {
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: .85rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+}
+
+.home-right h3 {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    color: black;
+    font-family: var(--fs-cormo-garamon);
+}
+
 .destination {
   background-image: url("assets/destination/background-destination-desktop.jpg");
 }
