@@ -91,12 +91,11 @@ hr {
  
 }
 .home {
-    
-    background-image: url("assets/home/background-home-desktop.jpg");
-   
+        background-image: url("assets/home/background-home-desktop.jpg");
 }
 
-.home-right, .home-left {
+.home-right, .home-left, 
+.destination-right, .destination-left {
   display: flex;
   justify-content: center;
   align-items: start;
