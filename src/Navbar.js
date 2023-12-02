@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import logo from "./assets/shared/logo.svg";
 
 const Navbar = () => {
+
+    
     return ( 
         <div>
             <div className="logo">
