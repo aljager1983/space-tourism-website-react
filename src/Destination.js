@@ -1,12 +1,16 @@
-import moon from "./assets/destination/image-moon.png"
 import React, { useState, useEffect } from 'react';
 
 const Destination = () => {
 
-    const [destinations, setDestinations] = useState([]);
+    const [destinations, setDestinations] = useState([0]);
     const [d, setD] = useState(0);
-    const con = (e) => setD(destinations[e.target.id]);
-    const img = d.images.png
+    const [planet, setPlanet] = useState("moon");
+    const con = (e) => {
+        const d = destinations[e.target.id];
+        setD(d);
+        const dname = d.name;
+        setPlanet(dname.toLowerCase());
+    };
     useEffect(() => {
         const abortCont = new AbortController();
         fetch('http://localhost:8000/destinations',  {signal : abortCont.signal})
@@ -30,7 +34,7 @@ const Destination = () => {
         <div className="destination">
             <div className="destination-left">
                 <h1>01 PICK YOUR DESTINATION</h1>
-                <img src={`${img}`} alt="bright side of moon" />
+                <img src={require(`./assets/destination/image-${planet}.png`)} alt="bright side of moon" />
             </div>
             <div className="destination-right">
                 <div className="destination-links">
@@ -53,5 +57,5 @@ const Destination = () => {
  
 export default Destination;
 
-//npx json-server --watch data.json --port 8000
+//npx json-server --watch data/data.json --port 8000
 //above line is to run json server
