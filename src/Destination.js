@@ -6,7 +6,7 @@ const Destination = () => {
     const [destinations, setDestinations] = useState([]);
     const [d, setD] = useState(0);
     const con = (e) => setD(destinations[e.target.id]);
-    const img = d.images.png
+    const img = JSON.stringify(d.images.png);
     useEffect(() => {
         const abortCont = new AbortController();
         fetch('http://localhost:8000/destinations',  {signal : abortCont.signal})
@@ -30,7 +30,7 @@ const Destination = () => {
         <div className="destination">
             <div className="destination-left">
                 <h1>01 PICK YOUR DESTINATION</h1>
-                <img src={`${img}`} alt="bright side of moon" />
+                <img src={ require({img}) } alt="bright side of moon" />
             </div>
             <div className="destination-right">
                 <div className="destination-links">
