@@ -1,7 +1,16 @@
+import React, { useState, useEffect } from 'react';
+
 const Crew = () => {
+
+    
     return ( 
         <div className="crew">
-            <h2>Crew Page</h2>
+            <div className="crew-left">
+
+            </div>
+            <div className="crew-right">
+
+            </div>
         </div>
      );
 }
