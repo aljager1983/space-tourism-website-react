@@ -22,7 +22,7 @@ const Destination = () => {
     };
     useEffect(() => {
         const abortCont = new AbortController();
-        fetch('data.json',  {signal : abortCont.signal})
+        fetch('./data/data.json',  {signal : abortCont.signal})
         .then(res => {
         if(!res.ok){        //error throwing
             throw Error('could not fetch the data for that resource');
