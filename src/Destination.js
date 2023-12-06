@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const Destination = () => {
 
     const [destinationsData, setDestinationsData] = useState([0]);
-    const [d, setD] = useState(0);
     const [destinationName, setDName] = useState();
     const [destinationDescription, setDDescrip] = useState();
     const [destinationDistance, setDDistance] = useState();
@@ -12,7 +11,6 @@ const Destination = () => {
     // console.log(destinationsData[0].images.png);
     const con = (e) => {
         const d = destinationsData[e.target.id];
-        setD(d);
         const dname = d.name;
         setPlanet(dname.toLowerCase());
         setDName(dname);
@@ -21,8 +19,7 @@ const Destination = () => {
         setDTravelTime(d.travel);
     };
     useEffect(() => {
-        const abortCont = new AbortController();
-        fetch('./data/data.json',  {signal : abortCont.signal})
+        fetch('http://localhost:8000/destinations')
         .then(res => {
         if(!res.ok){        //error throwing
             throw Error('could not fetch the data for that resource');
@@ -39,7 +36,6 @@ const Destination = () => {
         .catch(err => {
             console.log(err.message);
         })
-        return () => abortCont.abort();
     }, []);
     
     return ( 

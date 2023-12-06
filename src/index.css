@@ -97,7 +97,8 @@ hr {
 }
 
 .home-right, .home-left, 
-.destination-right, .destination-left {
+.destination-right, .destination-left,
+.crew-right, .crew-left{
   display: flex;
   justify-content: center;
   align-items: start;
