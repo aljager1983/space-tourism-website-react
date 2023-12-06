@@ -8,7 +8,8 @@ const Destination = () => {
     const [destinationDistance, setDDistance] = useState();
     const [destinationTraveTime, setDTravelTime] = useState();
     const [planet, setPlanet] = useState("moon");
-    // console.log(destinationsData[0].images.png);
+    // const [img, setImg] = useState();
+    // const [isPending, setIsPending] = useState(true);
     const con = (e) => {
         const d = destinationsData[e.target.id];
         const dname = d.name;
@@ -32,8 +33,10 @@ const Destination = () => {
             setDDescrip(data[0].description);
             setDDistance(data[0].distance);
             setDTravelTime(data[0].travel);
+            // setIsPending(false);
         })
         .catch(err => {
+            // setIsPending(true);
             console.log(err.message);
         })
     }, []);
@@ -43,6 +46,7 @@ const Destination = () => {
             <div className="destination-left">
                 <h1>01 PICK YOUR DESTINATION</h1>
                 <img src={require(`./assets/destination/image-${planet}.png`)} alt={`bright side of ${planet}`} />
+               
             </div>
             <div className="destination-right">
                 <div className="destination-links">
