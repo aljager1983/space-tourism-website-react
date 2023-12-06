@@ -8,8 +8,10 @@ const Crew = () => {
     const [label3, setLabel3] = useState();      //bio
     const [bgcolor, setBgColor] = useState();
     
-    const call = () => {
-        console.log("clicked");
+    const call = (e) => {
+
+        setBgColor("none");
+        console.log(e.target.id && e.target.style.backgroundColor);
         setBgColor("white");
     }
     useEffect(() => {
@@ -40,10 +42,10 @@ const Crew = () => {
             <h2>{label2}</h2>
             <p>{label3}</p>
             <div className='navDots'>
-                <div onClick={call} style={{backgroundColor: {bgcolor}}}></div>
-                <div onClick={call} style={{backgroundColor: {bgcolor}}}></div>
-                <div onClick={call} style={{backgroundColor: {bgcolor}}}></div>
-                <div onClick={call} style={{backgroundColor: {bgcolor}}}></div>
+                <div onClick={call} style={{background: bgcolor}} id="0"></div>
+                <div onClick={call} style={{background: bgcolor}}  id="1"></div>
+                <div onClick={call} style={{background: bgcolor}}  id="2"></div>
+                <div onClick={call} style={{background: bgcolor}}  id="3"></div>
             </div>
             </div>
             <div className="crew-right">
