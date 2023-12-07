@@ -90,7 +90,7 @@ hr {
   justify-content: center;
   text-align: justify;
   align-items: start;
-  /* padding: 15rem auto */
+  padding: auto;
  
 }
 .home {
@@ -105,12 +105,13 @@ hr {
   align-items: start;
   width: 100%;
   flex-direction: column;
-  padding: 5rem 10rem 0 10rem;
+  padding: 7rem 10rem 0 10rem;
 }
 
 .home-right {
   align-items: center;
 }
+
 .home-left h1 {
   font-size: 1.5rem;
     letter-spacing: 2px;
@@ -148,10 +149,6 @@ hr {
   background-image: url("assets/destination/background-destination-desktop.jpg");
 }
 
-.destination-left, .destination-right {
-  height: 80%;
-}
-
 .destination-right {
   justify-content: flex-start;
   margin-top: 2rem;
@@ -169,13 +166,14 @@ hr {
   background-image: url("assets/crew/background-crew-desktop.jpg");
 }
 
-.crew img {
-  height: 80vh;
+.crew img, .destination img {
+  height: 50vh;
 }
 
 .navDots {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 
 .navDots div{
@@ -185,7 +183,10 @@ hr {
     border: 1px solid white;
     width: 20px;
     height: 20px;
+}
 
+ .navDots div:focus {
+  background-color: white;
 }
 
 

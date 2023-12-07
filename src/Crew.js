@@ -9,10 +9,8 @@ const Crew = () => {
     const [bgcolor, setBgColor] = useState();
     
     const call = (e) => {
-
-        setBgColor("none");
-        console.log(e.target.id && e.target.style.backgroundColor);
-        setBgColor("white");
+       
+    
     }
     useEffect(() => {
         fetch('http://localhost:8000/crew')
@@ -20,7 +18,9 @@ const Crew = () => {
         if(!res.ok){        //error throwing
             throw Error('could not fetch the data for that resource');
           }
+          console.log("fetch has been triggered");
           return  res.json();
+          
         })
         .then(data => {
             console.log(data);
@@ -28,6 +28,7 @@ const Crew = () => {
             setLabel1(data[0].role);
             setLabel2(data[0].name);
             setLabel3(data[0].bio);
+            
         })
         .catch(err => {
             console.log(err.message);
@@ -42,10 +43,10 @@ const Crew = () => {
             <h2>{label2}</h2>
             <p>{label3}</p>
             <div className='navDots'>
-                <div onClick={call} style={{background: bgcolor}} id="0"></div>
-                <div onClick={call} style={{background: bgcolor}}  id="1"></div>
-                <div onClick={call} style={{background: bgcolor}}  id="2"></div>
-                <div onClick={call} style={{background: bgcolor}}  id="3"></div>
+                <div onClick={call} id="0" tabIndex="1"></div>
+                <div onClick={call} id="1" tabIndex="2"></div>
+                <div onClick={call} id="2" tabIndex="3"></div>
+                <div onClick={call} id="3" tabIndex="4"></div>
             </div>
             </div>
             <div className="crew-right">
