@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 const Crew = () => {
     const [data, setData] = useState();
-    const [imagePrev, setImagePrev] = useState();
+    const [imagePrev, setImagePrev] = useState("douglas-hurley");
     const [label1, setLabel1] = useState();     //role
     const [label2, setLabel2] = useState();     //name
     const [label3, setLabel3] = useState();      //bio
-    const [bgcolor, setBgColor] = useState();
     
     const call = (e) => {
-       
+        const callId = e.target.id;
+        const index = e.target.tabIndex;
+        setImagePrev(callId);
+        setLabel1(data[index].role);
+        setLabel2(data[index].name);
+        setLabel3(data[index].bio);
+       console.log(index);
     
     }
     useEffect(() => {
@@ -23,7 +28,7 @@ const Crew = () => {
           
         })
         .then(data => {
-            console.log(data);
+            // console.log(data);
             setData(data);
             setLabel1(data[0].role);
             setLabel2(data[0].name);
@@ -43,14 +48,14 @@ const Crew = () => {
             <h2>{label2}</h2>
             <p>{label3}</p>
             <div className='navDots'>
-                <div onClick={call} id="0" tabIndex="1"></div>
-                <div onClick={call} id="1" tabIndex="2"></div>
-                <div onClick={call} id="2" tabIndex="3"></div>
-                <div onClick={call} id="3" tabIndex="4"></div>
+                <div onClick={call} id="douglas-hurley" tabIndex="0"></div>
+                <div onClick={call} id="mark-shuttleworth" tabIndex="1"></div>
+                <div onClick={call} id="victor-glover" tabIndex="2"></div>
+                <div onClick={call} id="anousheh-ansari" tabIndex="3"></div>
             </div>
             </div>
             <div className="crew-right">
-            <img src={require(`./assets/crew/image-anousheh-ansari.png`)} alt={`bright side of`} />
+            <img src={require(`./assets/crew/image-${imagePrev}.png`)} alt='bright side of' />  
             </div>
         </div>
      );
