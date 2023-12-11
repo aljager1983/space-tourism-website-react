@@ -42,7 +42,7 @@ const Crew = () => {
 
     return ( 
         <div className="crew">
-            <div className="crew-left">
+            <div className="left">
             <h1>02 MEET YOUR CREW</h1>
             <h2>{label1}</h2>
             <h2>{label2}</h2>
@@ -54,7 +54,7 @@ const Crew = () => {
                 <div onClick={call} id="anousheh-ansari" tabIndex="3"></div>
             </div>
             </div>
-            <div className="crew-right">
+            <div className="right">
             <img src={require(`./assets/crew/image-${imagePrev}.png`)} alt='bright side of' />  
             </div>
         </div>

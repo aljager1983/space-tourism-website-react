@@ -43,19 +43,19 @@ const Destination = () => {
     
     return ( 
         <div className="destination">
-            <div className="destination-left">
+            <div className="left">
                 <h1>01 PICK YOUR DESTINATION</h1>
                 <img src={require(`./assets/destination/image-${planet}.png`)} alt={`bright side of ${planet}`} />
                
             </div>
-            <div className="destination-right">
-                <div className="destination-links">
+            <div className="right">
+                <div className="links">
                     <h2 onClick={con} id="0">Moon</h2>
                     <h2 onClick={con} id="1">Mars</h2>
                     <h2 onClick={con} id="2">Europa</h2>
                     <h2 onClick={con} id="3">Titan</h2>
                 </div>
-                <div className="destination-name">
+                <div className="name">
                     <h2>{destinationName}</h2> 
                 </div>
                 
@@ -66,7 +66,7 @@ const Destination = () => {
                  
               
                     <hr />
-                <div className="destination-stats">
+                <div className="stats">
                     <div className="avg-distance">
                         <h2>AVG. DISTANCE</h2>
                         <h3>{destinationDistance}</h3>
