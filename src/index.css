@@ -32,7 +32,7 @@ body {
   justify-content: 0rem;
 }
 
-hr {
+.hr-nav {
   height: 0px;
   width: calc(50vw - 7rem);
   position: absolute;
@@ -101,71 +101,114 @@ hr {
   display: flex;
   justify-content: start;
   align-items: start;
-  width: 100%;
+  width: 50%;
   flex-direction: column;
-  padding: 7rem 10rem 0 10rem;
+  margin: 10% 5%;
 }
 
+.left {
+  margin-left: 10%;
+}
+
+.home .right, .home .left {
+  margin: 20% 9%;
+
+}
 .home .right {
   align-items: center;
 }
 
-.home .left h1 {
-  font-size: 1.5rem;
-    letter-spacing: 2px;
+.sml-txt {
+    font-size: 1.5rem;
     font-weight: 300;
-    letter-spacing: 4px;
+    letter-spacing: 7px;
 }
 
-.home .left h2 {
+.lg-txt {
   font-family: var(--fs-cormo-garamon);
-  font-size: 7rem;
+  font-size: 8.5rem;
   font-weight: 200;
+  text-transform: uppercase;
 }
 
-.home .left p {
-  font-family: Arial, Helvetica, sans-serif;
-    font-size: .85rem;
+.home .left {
+  width: 500px; 
+}
+.descripTxt {
+  font-family: "Arial Narrow", Helvetica, sans-serif;
+    font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 200;
+    letter-spacing: 1px;
 }
 
 .home .right h3 {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 2rem;
     justify-content: center;
     align-items: center;
     background-color: white;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     color: black;
     font-family: var(--fs-cormo-garamon);
 }
 
 .destination {
   background-image: url("assets/destination/background-destination-desktop.jpg");
+  padding-left: 0;
 }
 
+.destination .name .lg-txt {
+  font-size: 7rem;
+}
+.destination .sml-txt {
+  margin-bottom: 5rem;
+}
 .destination .right {
-  justify-content: flex-start;
-  margin-top: 2rem;
+  padding-top: 5rem; 
+  width: 700px;
+  margin-right: 0;
 }
 
 .destination .links {
   display: flex;
-  
   flex-direction: row;
   justify-items: space-between;
-  gap: 1rem;
+  gap: 3rem;
 }
 
+.destination .links h2:hover {
+  border-bottom: 2px white solid;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.destination .descripTxt {
+  width: 70%;
+  
+}
+
+.hr-divider {
+  margin: 3rem 0 1rem 0;
+  height: 0px;
+  width: 70%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 55%;
+}
 .crew {
   background-image: url("assets/crew/background-crew-desktop.jpg");
 }
 
-.crew img, .destination img {
-  height: 50vh;
+.preview {
+  height: 60vh;
+  padding-left: 5rem;
 }
 
 .navDots {

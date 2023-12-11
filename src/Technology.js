@@ -38,7 +38,7 @@ const Technology = () => {
         <div className="technology">
 
             <div className="left">
-                <h1>03 SPACE LAUNCH 101</h1>
+                <h1 className="sml-txt">03 SPACE LAUNCH 101</h1>
                 <div className="navNumDots">
                     <h2 id="launch-vehicle" tabIndex="0" onClick={call}>1</h2>
                     <h2 id="spaceport" tabIndex="1" onClick={call}>2</h2>
@@ -50,7 +50,7 @@ const Technology = () => {
             </div>
 
             <div className="right">
-                <img src={require(`./assets/technology/image-${imagePrev}-${winSize}.jpg`)} alt='bright side of' />  
+                <img src={require(`./assets/technology/image-${imagePrev}-${winSize}.jpg`)} alt='bright side of' className='preview'/>  
             </div>
         </div>
      );

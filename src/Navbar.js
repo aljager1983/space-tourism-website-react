@@ -8,7 +8,7 @@ const Navbar = () => {
         <div>
             <div className="logo">
                 <img src={logo} alt="star-logo" className="logo-icon" />  
-                <hr />
+                <hr className="hr-nav"/>
             </div>
        
             <nav className="navbar">

@@ -43,7 +43,7 @@ const Crew = () => {
     return ( 
         <div className="crew">
             <div className="left">
-            <h1>02 MEET YOUR CREW</h1>
+            <h1 className="sml-txt">02 MEET YOUR CREW</h1>
             <h2>{label1}</h2>
             <h2>{label2}</h2>
             <p>{label3}</p>
@@ -55,7 +55,7 @@ const Crew = () => {
             </div>
             </div>
             <div className="right">
-            <img src={require(`./assets/crew/image-${imagePrev}.png`)} alt='bright side of' />  
+            <img src={require(`./assets/crew/image-${imagePrev}.png`)} alt='bright side of' className='preview'/>  
             </div>
         </div>
      );

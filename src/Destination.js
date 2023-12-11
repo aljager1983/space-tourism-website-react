@@ -44,29 +44,29 @@ const Destination = () => {
     return ( 
         <div className="destination">
             <div className="left">
-                <h1>01 PICK YOUR DESTINATION</h1>
-                <img src={require(`./assets/destination/image-${planet}.png`)} alt={`bright side of ${planet}`} />
+                <h1 className="sml-txt">01 PICK YOUR DESTINATION</h1>
+                <img src={require(`./assets/destination/image-${planet}.png`)} alt={`bright side of ${planet}`} className='preview'/>
                
             </div>
             <div className="right">
                 <div className="links">
-                    <h2 onClick={con} id="0">Moon</h2>
-                    <h2 onClick={con} id="1">Mars</h2>
-                    <h2 onClick={con} id="2">Europa</h2>
-                    <h2 onClick={con} id="3">Titan</h2>
+                    <h2 onClick={con} id="0">MOON</h2>
+                    <h2 onClick={con} id="1">MARS</h2>
+                    <h2 onClick={con} id="2">EUROPA</h2>
+                    <h2 onClick={con} id="3">TITAN</h2>
                 </div>
                 <div className="name">
-                    <h2>{destinationName}</h2> 
+                    <h2 className="lg-txt">{destinationName}</h2> 
                 </div>
                 
 
-                <div className="description">
-                    <p>{destinationDescription}</p> 
+                <div>
+                    <p className='descripTxt'>{destinationDescription}</p> 
                 </div>
                  
               
-                    <hr />
-                <div className="stats">
+                    <hr className='hr-divider'/>
+                <div className="stats ">
                     <div className="avg-distance">
                         <h2>AVG. DISTANCE</h2>
                         <h3>{destinationDistance}</h3>
