@@ -67,11 +67,11 @@ const Destination = () => {
               
                     <hr className='hr-divider'/>
                 <div className="stats ">
-                    <div className="avg-distance">
+                    <div className="heading">
                         <h2>AVG. DISTANCE</h2>
                         <h3>{destinationDistance}</h3>
                     </div>
-                    <div className="est-trave-time">
+                    <div className="heading">
                         <h2>EST. TRAVEL TIME</h2>
                         <h3>{destinationTraveTime}</h3>
                     </div>

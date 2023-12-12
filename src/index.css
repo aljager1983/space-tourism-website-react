@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap");
+
 
 :root {
   --fs-cormo-garamon: 'Cormorant Garamond', serif;
   --fs-sofia: 'Sofia Sans Extra Condensed', sans-serif;
+  --fs-noto: 'Noto Serif Old Uyghur', serif;
 }
 
 * {
@@ -62,7 +62,7 @@ body {
   gap: 10px;
   color: #fff;
   text-decoration: none;
-   padding-top: 2.5rem;
+  padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   padding-left: 2vw;
 }
@@ -201,6 +201,18 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 55%;
+}
+.stats .heading h2{
+  font-weight: 200;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.stats .heading h3 {
+  font-family: var(--fs-noto);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 .crew {
   background-image: url("assets/crew/background-crew-desktop.jpg");
