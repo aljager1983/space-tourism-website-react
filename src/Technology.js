@@ -39,14 +39,18 @@ const Technology = () => {
 
             <div className="left">
                 <h1 className="sml-txt">03 SPACE LAUNCH 101</h1>
+                <div className="details">
                 <div className="navNumDots">
                     <h2 id="launch-vehicle" tabIndex="0" onClick={call}>1</h2>
                     <h2 id="spaceport" tabIndex="1" onClick={call}>2</h2>
                     <h2 id="space-capsule" tabIndex="2" onClick={call}>3</h2>
                 </div>
-                <h2>THE TERMINOLOGY</h2>
-                <h2>{label1}</h2>
-                <p>{label2}</p>
+                <div className="sub-details">
+                    <h1>THE TERMINOLOGY...</h1>
+                    <h2>{label1}</h2>
+                    <p className='descripTxt'>{label2}</p>
+                    </div>
+                </div>
             </div>
 
             <div className="right">

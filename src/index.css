@@ -218,24 +218,59 @@ body {
   background-image: url("assets/crew/background-crew-desktop.jpg");
 }
 
+.role {
+  padding: 30% 0 1rem 0;
+  font-family: var(--fs-cormo-garamon);
+  font-weight: 200;
+  text-transform: uppercase;
+  color: grey;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.crew .name {
+  font-family: var(--fs-cormo-garamon);
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.crew .descripTxt {
+  width: 400px;
+  margin-bottom: 5rem;
+}
+
 .preview {
   height: 60vh;
   padding-left: 5rem;
 }
 
+.crew .preview {
+  position: absolute;
+  bottom: 0;
+  height: 70%;
+  right: 10%;
+}
 .navDots {
+  position: absolute;
   display: flex;
   flex-direction: row;
   gap: 10px;
+  width: 15%;
+  justify-content: space-between;
+  bottom: 10%;
 }
 
 .navDots div{
    /* make them little circles */
     display: flex;
+    flex-direction: row;
     border-radius: 50%;
-    border: 1px solid white;
-    width: 20px;
-    height: 20px;
+    border: 1px solid grey;
+    width: 15px;
+    height: 15px;
+    background-color: grey;
 }
 
  .navDots div:focus {
@@ -244,26 +279,66 @@ body {
 
 .navDots div:hover {
   cursor: pointer;
+  background-color: white;
 }
 
 .technology {
   background-image: url("assets/technology/background-technology-desktop.jpg");
 }
 
+.technology .left {
+  width: 70%;
+}
 
+.technology .left .details {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30%;
+}
+
+.sub-details h1 {
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.sub-details h2 {
+  padding: 1rem 0 1.5rem 0;
+  font-family: var(--fs-cormo-garamon);
+  font-size: 3.5rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.navNumDots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .navNumDots h2{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 60px;
+  height: 60px;
   background-color: #fff;
   color: #000;
   text-align: center;
   border-radius: 50%;
-  margin-top: .5rem;
+  margin-right:  3.5rem ;
+  
 }
 
 .navNumDots h2:hover {
   cursor: pointer;
+}
+
+.technology .preview {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+}
+
+.technology .details {
+  height: 250px;
 }

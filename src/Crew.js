@@ -44,9 +44,9 @@ const Crew = () => {
         <div className="crew">
             <div className="left">
             <h1 className="sml-txt">02 MEET YOUR CREW</h1>
-            <h2>{label1}</h2>
-            <h2>{label2}</h2>
-            <p>{label3}</p>
+            <h2 className='role'>{label1}</h2>
+            <h2 className='name'>{label2}</h2>
+            <p className='descripTxt'>{label3}</p>
             <div className='navDots'>
                 <div onClick={call} id="douglas-hurley" tabIndex="0"></div>
                 <div onClick={call} id="mark-shuttleworth" tabIndex="1"></div>
