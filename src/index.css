@@ -21,23 +21,25 @@ body {
 
 
 .logo-icon {
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .logo {
   display: flex;
   position: absolute;
-  padding: 2.5rem 2rem;
+  padding: 3.5rem 4rem;
   justify-content: 0rem;
 }
 
 .hr-nav {
   height: 0px;
-  width: calc(50vw - 7rem);
+  width: calc(50vw - 13rem);
   position: absolute;
   top: 5rem;
-  left: 7rem;
+  left: 90%;
+  border-color: grey;
+  z-index: 1;
 }
 
 .navbar {
@@ -47,33 +49,38 @@ body {
   margin-top: 2rem;
   background-color: hsla(244, 31%, 59%, 0.2);
   justify-content: baseline;
-  width: calc(50% - 2vw);   
+  width: 55vw;   
   right: 0px;
-  
   -webkit-backdrop-filter: blur(5px); 
   backdrop-filter: blur(5px);
-  
 }
 
 .navitems {
   display: flex;
   flex-direction: row;
-  letter-spacing: 2px;
+  justify-content: space-between;
+  letter-spacing: 3px;
   gap: 10px;
   color: #fff;
   text-decoration: none;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  padding-left: 2vw;
+  margin-left: 60px;
+  font-size: 1.2rem;
 }
 
 .navitems span {
   font-weight: 200;
   justify-content: space-between;
 }
+
+#link-home {
+  margin-left: 150px;
+}
 .navitems:hover {
-  border-bottom: solid 1px white;
+  border-bottom: solid 2px white;
   cursor: pointer;
+  padding-bottom: calc(2.5rem - 2px);
 }
 
 .navitems .bold {
