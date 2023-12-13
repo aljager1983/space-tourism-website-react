@@ -44,7 +44,7 @@ const Destination = () => {
     return ( 
         <div className="destination">
             <div className="left">
-                <h1 className="sml-txt">01 PICK YOUR DESTINATION</h1>
+                <h1 className="sml-txt"><span>01</span> PICK YOUR DESTINATION</h1>
                 <img src={require(`./assets/destination/image-${planet}.png`)} alt={`bright side of ${planet}`} className='preview'/>
                
             </div>
