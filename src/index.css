@@ -18,7 +18,9 @@ body {
   font-family: var(--fs-sofia);
   
 }
-
+.navDots .active {
+  background-color: white;
+}
 
 .logo-icon {
   height: 3rem;
@@ -96,7 +98,7 @@ body {
   width: 100vw;
   justify-content: center;
   text-align: justify;
-  align-items: start;
+  align-items: flex-start;
   padding: auto;
  
 }
@@ -106,8 +108,8 @@ body {
 
 .right, .left{
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 50%;
   flex-direction: column;
   margin: 10% 5%;
@@ -281,12 +283,12 @@ body {
 }
 
  .navDots div:focus {
-  background-color: white;
+  /* background-color: white; */
 }
 
 .navDots div:hover {
   cursor: pointer;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .technology {

@@ -6,6 +6,8 @@ const Crew = () => {
     const [label1, setLabel1] = useState();     //role
     const [label2, setLabel2] = useState();     //name
     const [label3, setLabel3] = useState();      //bio
+    const [navButtonStyle, setNavButtonStyle] = useState();
+    const [isActive, setIsActive] = useState(false);
     
     const call = (e) => {
         const callId = e.target.id;
@@ -14,7 +16,9 @@ const Crew = () => {
         setLabel1(data[index].role);
         setLabel2(data[index].name);
         setLabel3(data[index].bio);
-       console.log(index);
+        setIsActive(current => !current);
+       callId && e.target.classList.toggle("active");
+       
     
     }
     useEffect(() => {
@@ -33,6 +37,7 @@ const Crew = () => {
             setLabel1(data[0].role);
             setLabel2(data[0].name);
             setLabel3(data[0].bio);
+            setNavButtonStyle({backgroundColor:'white'});
             
         })
         .catch(err => {
@@ -48,10 +53,10 @@ const Crew = () => {
             <h2 className='name'>{label2}</h2>
             <p className='descripTxt'>{label3}</p>
             <div className='navDots'>
-                <div onClick={call} id="douglas-hurley" tabIndex="0"></div>
-                <div onClick={call} id="mark-shuttleworth" tabIndex="1"></div>
-                <div onClick={call} id="victor-glover" tabIndex="2"></div>
-                <div onClick={call} id="anousheh-ansari" tabIndex="3"></div>
+                <div onClick={call} id="douglas-hurley" tabIndex="0" className={isActive ? "active" : ""}></div>
+                <div onClick={call} id="mark-shuttleworth" tabIndex="1" className={isActive ? "active" : ""}></div>
+                <div onClick={call} id="victor-glover" tabIndex="2" className={isActive ? "active" : ""}></div>
+                <div onClick={call} id="anousheh-ansari" tabIndex="3" className={isActive ? "active" : ""}></div>
             </div>
             </div>
             <div className="right">
