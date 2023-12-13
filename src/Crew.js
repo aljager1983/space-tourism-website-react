@@ -17,7 +17,7 @@ const Crew = () => {
         setLabel2(data[index].name);
         setLabel3(data[index].bio);
         setIsActive(current => !current);
-       callId && e.target.classList.toggle("active");
+        e.target.classList.toggle("active");
        
     
     }
