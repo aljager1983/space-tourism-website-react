@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "./assets/shared/logo.svg";
+import burger from "./assets/shared/icon-hamburger.svg";
 
 const Navbar = () => {
 
@@ -17,6 +18,7 @@ const Navbar = () => {
                 <Link to="/crew"  className="navitems" id="link-crew"><span className="bold">02</span><span>CREW</span></Link>
                 <Link to="/technology"  className="navitems" id="link-tech"><span className="bold">03</span><span>TECHNOLOGY</span></Link>
             </nav>
+            <img src={burger} alt="burger icon" className="burger"/>
         </div>
      );
 }

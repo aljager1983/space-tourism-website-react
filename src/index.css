@@ -76,6 +76,9 @@ body {
   justify-content: space-between;
 }
 
+.burger {
+  display: none;
+}
 #link-home {
   margin-left: 150px;
 }
@@ -283,12 +286,12 @@ body {
 }
 
  .navDots div:focus {
-  /* background-color: white; */
+  background-color: white;
 }
 
 .navDots div:hover {
   cursor: pointer;
-  /* background-color: white; */
+  background-color: white;
 }
 
 .technology {
@@ -377,6 +380,65 @@ body {
   .technology .left .details {
     
     padding-top: 20%;
+  }
+  
+}
+
+@media screen and (max-width:376px) {
+
+  .logo {
+    display: flex;
+    position: absolute;
+    padding: 1.5rem;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    right: 0;
+    padding: 2rem;
+  }
+
+  .home, .destination, .crew, .technology {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home {
+    background-image: url("assets/home/background-home-mobile.jpg");
+}
+  .home .left, .home .right {
+    width: 350px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .right h3 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    font-size: 1.3rem;
+    bottom: 0px;
+  }
+
+  .sml-txt {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+  
+  .lg-txt {
+    font-size: 5rem;
+  }
+
+  .descripTxt {
+    font-family: "Arial Narrow", Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 200;
+      letter-spacing: .75px;
   }
   
 }
