@@ -18,6 +18,7 @@ body {
   font-family: var(--fs-sofia);
   
 }
+
 .navDots .active {
   background-color: white;
 }
@@ -44,8 +45,14 @@ body {
   z-index: 1;
 }
 
+.docWidth {
+  position: absolute;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
 .navbar {
-  display: flex;
+  
   position: absolute;
   
   margin-top: 2rem;
@@ -392,7 +399,46 @@ body {
     padding: 1.5rem;
   }
   .navbar {
-    display: none;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 2rem;
+    background-color: hsla(244, 31%, 59%, 0.2);
+    justify-content: flex-start;
+    width: 100%;   
+    right: 0px;
+    -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
+  }
+
+  .navitems {
+    display: flex;
+    justify-content: none;
+    letter-spacing: 3px;
+    gap: 0px;
+    color: #fff;
+    text-decoration: none;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-left: 0px;
+    font-size: 1.2rem;
+  }
+  
+  .navitems span {
+    font-weight: 200;
+    justify-content: none;
+  }
+
+  #link-home {
+    margin-left: 0px;
+  }
+  .navitems:hover {
+    border-bottom: solid 2px white;
+    cursor: pointer;
+    padding-bottom: 0;
+  }
+  
+  .navitems .bold {
+    font-weight: bold;
   }
 
   .burger {
@@ -405,9 +451,11 @@ body {
   .home, .destination, .crew, .technology {
     flex-direction: column;
     text-align: center;
+    justify-content: flex-start;
   }
   .home {
     background-image: url("assets/home/background-home-mobile.jpg");
+    
 }
   .home .left, .home .right {
     width: 350px;
@@ -440,5 +488,7 @@ body {
       font-weight: 200;
       letter-spacing: .75px;
   }
+
+
   
 }
