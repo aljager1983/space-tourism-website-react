@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "./assets/shared/logo.svg";
 import burger from "./assets/shared/icon-hamburger.svg";
 
@@ -18,7 +18,7 @@ const Navbar = () => {
             setNavStyle("none")
             setBurgStyle("flex");
         }
-    }, [toggle])
+    }, [docWidth, toggle])
 
     const hide = () => {
         // setNavStyle("flex");

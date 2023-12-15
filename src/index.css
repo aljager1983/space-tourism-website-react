@@ -119,7 +119,7 @@ body {
 .right, .left{
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   width: 50%;
   flex-direction: column;
   margin: 10% 5%;
@@ -362,7 +362,7 @@ body {
   height: 250px;
 }
 
-@media screen and (max-height:768px) {
+@media screen and (max-height:768px){
 
 
   .right, .left{
@@ -396,29 +396,32 @@ body {
   .logo {
     display: flex;
     position: absolute;
-    padding: 1.5rem;
+    padding: 2rem;
+  }
+
+  .logo-icon {
+    height: 2rem;
+    width: 2rem;
   }
   .navbar {
     position: absolute;
     flex-direction: column;
-    margin-top: 2rem;
-    background-color: hsla(244, 31%, 59%, 0.2);
-    justify-content: flex-start;
-    width: 100%;   
-    right: 0px;
-    -webkit-backdrop-filter: blur(5px); 
-    backdrop-filter: blur(5px);
+    width: 100%; 
+    height: 100vh;  
+    margin-top: 0;
+    z-index: 2;
   }
 
   .navitems {
     display: flex;
-    justify-content: none;
+    justify-content:end;
     letter-spacing: 3px;
-    gap: 0px;
+    gap: 5px;
     color: #fff;
     text-decoration: none;
     padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0rem;
+    padding-right: 1rem;
     margin-left: 0px;
     font-size: 1.2rem;
   }
@@ -453,28 +456,38 @@ body {
     text-align: center;
     justify-content: flex-start;
   }
+
+  .right, .left{
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
   .home {
     background-image: url("assets/home/background-home-mobile.jpg");
-    
+    background-size: cover;
 }
   .home .left, .home .right {
     width: 350px;
-    margin: 0;
+    margin:  auto;
     justify-content: center;
     align-items: center;
+    gap:10px;
   }
 
   .home .right h3 {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    font-size: 1.3rem;
-    bottom: 0px;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    font-size: 1.2rem;
+    bottom: 30px;
   }
 
   .sml-txt {
     font-size: 1.2rem;
     letter-spacing: 3px;
+    padding-top: 4rem;
   }
   
   .lg-txt {
@@ -483,12 +496,21 @@ body {
 
   .descripTxt {
     font-family: "Arial Narrow", Helvetica, sans-serif;
-      font-size: 1rem;
+      font-size: .85rem;
       line-height: 1.5rem;
       font-weight: 200;
-      letter-spacing: .75px;
+      letter-spacing: .5px;
+      padding: 1rem;
   }
 
+  .destination {
+    background-image: url("assets/destination/background-destination-mobile.jpg");
+  }
 
+  .destination .preview {
+    height: 100px;
+    padding-left: 0rem;
+  }
+  
   
 }
