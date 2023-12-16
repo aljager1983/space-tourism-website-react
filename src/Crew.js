@@ -18,6 +18,7 @@ const Crew = () => {
     
     }
     useEffect(() => {
+        const getData = () => {
         fetch('http://localhost:8000/crew')
         .then(res => {
         if(!res.ok){        //error throwing
@@ -37,7 +38,8 @@ const Crew = () => {
         })
         .catch(err => {
             console.log(err.message);
-        })
+        })}
+        return () => getData(); //no duplicate mounting
     }, []);
 
     return ( 

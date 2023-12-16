@@ -119,7 +119,7 @@ body {
 .right, .left{
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   flex-direction: column;
   margin: 10% 5%;
@@ -176,7 +176,7 @@ body {
 
 .destination {
   background-image: url("assets/destination/background-destination-desktop.jpg");
-  padding-left: 0;
+  padding-left: ;
 }
 
 .destination .name .lg-txt {
@@ -233,6 +233,7 @@ body {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
+
 .crew {
   background-image: url("assets/crew/background-crew-desktop.jpg");
 }
@@ -485,8 +486,8 @@ body {
   }
 
   .sml-txt {
-    font-size: 1.2rem;
-    letter-spacing: 3px;
+    font-size: 1rem;
+    letter-spacing: 2.5px;
     padding-top: 4rem;
   }
   
@@ -499,18 +500,72 @@ body {
       font-size: .85rem;
       line-height: 1.5rem;
       font-weight: 200;
-      letter-spacing: .5px;
-      padding: 1rem;
+      letter-spacing: .3px;
+      padding: 0rem;
   }
 
   .destination {
     background-image: url("assets/destination/background-destination-mobile.jpg");
+    background-size: cover;
   }
 
   .destination .preview {
     height: 100px;
-    padding-left: 0rem;
+    padding: 0;
   }
   
+  .destination .name .lg-txt {
+    font-size: 5rem;
+  }
+  .destination .sml-txt {
+    margin-bottom: 1rem;
+  }
+  .destination .right {
+    padding-top: 2rem; 
+    width: 376px;
+    margin: 0;
+  }
   
+  .destination .links {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    gap: 1rem;
+  }
+  
+  .destination .links h2:hover {
+    border-bottom: 2px white solid;
+    margin-bottom: -2px;
+    cursor: pointer;
+  }
+  
+  .destination .descripTxt {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .hr-divider {
+    margin: 1rem 0 0rem 0;
+    height: 0px;
+    width: 70%;
+  }
+  
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .stats .heading h2{
+    font-weight: 200;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .stats .heading h3 {
+    font-family: var(--fs-noto);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
 }

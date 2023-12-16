@@ -20,6 +20,7 @@ const Destination = () => {
         setDTravelTime(d.travel);
     };
     useEffect(() => {
+        const getData = () => {
         fetch('http://localhost:8000/destinations')
         .then(res => {
         if(!res.ok){        //error throwing
@@ -38,7 +39,8 @@ const Destination = () => {
         .catch(err => {
             // setIsPending(true);
             console.log(err.message);
-        })
+        })}
+        return () => getData();  //no duplicate mounting
     }, []);
     
     return ( 
