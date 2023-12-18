@@ -8,7 +8,7 @@ const Destination = () => {
     const [destinationDistance, setDDistance] = useState();
     const [destinationTraveTime, setDTravelTime] = useState();
     const [planet, setPlanet] = useState("moon");
-    // const [img, setImg] = useState();
+    const [img, setImg] = useState("./assets/destinations/image-moon/png");
     // const [isPending, setIsPending] = useState(true);
     const con = (e) => {
         const d = destinationsData[e.target.id];
@@ -66,9 +66,10 @@ const Destination = () => {
                     <p className='descripTxt'>{destinationDescription}</p> 
                 </div>
                  
-              
-                    <hr className='hr-divider'/>
+                <hr className='hr-divider'/>
+                    
                 <div className="stats ">
+                
                     <div className="heading">
                         <h2>AVG. DISTANCE</h2>
                         <h3>{destinationDistance}</h3>

@@ -176,7 +176,7 @@ body {
 
 .destination {
   background-image: url("assets/destination/background-destination-desktop.jpg");
-  padding-left: ;
+  padding-left: 0;
 }
 
 .destination .name .lg-txt {
@@ -341,16 +341,18 @@ body {
   align-items: center;
   width: 60px;
   height: 60px;
-  background-color: #fff;
-  color: #000;
+  background-color: grey;
+  color: white;
   text-align: center;
   border-radius: 50%;
   margin-right:  3.5rem ;
   
 }
 
-.navNumDots h2:hover {
+.navNumDots h2:hover, .navNumDots h2:focus {
   cursor: pointer;
+  background-color: #fff;
+  color: #000
 }
 
 .technology .preview {
@@ -455,6 +457,7 @@ body {
   .home, .destination, .crew, .technology {
     flex-direction: column;
     text-align: center;
+    align-items: center;
     justify-content: flex-start;
   }
 
@@ -501,7 +504,7 @@ body {
       line-height: 1.5rem;
       font-weight: 200;
       letter-spacing: .3px;
-      padding: 0rem;
+      padding: 0rem 1rem;
   }
 
   .destination {
@@ -521,11 +524,13 @@ body {
     margin-bottom: 1rem;
   }
   .destination .right {
-    padding-top: 2rem; 
-    width: 376px;
+    padding: 2rem 1rem; 
+    width: 90%;
     margin: 0;
   }
   
+
+
   .destination .links {
     display: flex;
     flex-direction: row;
@@ -541,20 +546,25 @@ body {
   
   .destination .descripTxt {
     width: 100%;
-    padding: 0;
+    padding: 0rem;
+    text-align: center;
   }
   
   .hr-divider {
+    position: absolute;
     margin: 1rem 0 0rem 0;
     height: 0px;
-    width: 70%;
+    width: 80%;
+    bottom: 20vh;
   }
   
   .stats {
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
+    bottom: 10vh;
   }
   .stats .heading h2{
     font-weight: 200;
@@ -566,6 +576,72 @@ body {
     font-family: var(--fs-noto);
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
+
+  .crew {
+    background-image: url("assets/crew/background-crew-mobile.jpg");
+  }
+
+  .role {
+    padding: 30% 0 0rem 0;
+    font-family: var(--fs-cormo-garamon);
+    font-weight: 200;
+    text-transform: uppercase;
+    color: grey;
+    font-size: 1.3rem;
+    letter-spacing: 0px;
+  }
+  .preview {
+    padding-left: 0;
+  }
+  .crew .name {
+    font-family: var(--fs-cormo-garamon);
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .crew .descripTxt {
+    width: 80%;
+    margin-bottom: 5rem;
+    /* font-size:  */
+  }
+
+  .crew .left {
+    position: absolute;
+    top: 30%;
+  }
+  .crew .right {
+    display: flex;
+    flex-direction: row;
+   
+  }
+  .crew .preview {
+    position: absolute;
+    bottom: 55%;
+    height: 40%;
+    /* below line starts the centering of image with position:absolute */
+    left: 0;          
+    right: 0;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .navDots {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 55%;
+    justify-content: space-between;
+    bottom: 0%;
+  }
+  
+  .crew .sml-txt {
+    display: none;
+  }
+  
+  
+
 }
