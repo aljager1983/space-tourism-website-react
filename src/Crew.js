@@ -56,6 +56,7 @@ const Crew = () => {
                 <div onClick={call} id="anousheh-ansari" tabIndex="3" ></div>
             </div>
             </div>
+
             <div className="right">
             <img src={require(`./assets/crew/image-${imagePrev}.png`)} alt='bright side of' className='preview'/>  
             </div>

@@ -8,6 +8,8 @@ const Technology = () => {
     const [winSize, setWinSize] = useState("portrait");
     const [label1, setLabel1] = useState();
     const [label2, setLabel2] = useState();
+    const docWidth = document.documentElement.clientWidth;
+    const docHeight = document.documentElement.clientHeight;
 
     useEffect(() => {
         fetch('data.json')
@@ -23,9 +25,18 @@ const Technology = () => {
             setLabel1(data.technology[0].name);
             setLabel2(data.technology[0].description);
         })
-        .catch()
+        .catch(err => {
+            console.log(err.message);
+        })
 
-    }, []);
+        //setting portrait or landscape
+        if(docWidth >= 377) {
+            setWinSize("portrait");
+            
+        } else {
+            setWinSize("landscape");
+        }
+    }, [docWidth]);
 
     const call = (e) => {
         const x = e.target.id;
