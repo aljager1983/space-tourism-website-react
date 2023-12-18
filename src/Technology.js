@@ -10,7 +10,7 @@ const Technology = () => {
     const [label2, setLabel2] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:8000/technology')
+        fetch('data.json')
         .then(res => {
             if(!res.ok){        //error throwing
                 throw Error('could not fetch the data for that resource');
@@ -19,9 +19,9 @@ const Technology = () => {
               return  res.json();
         })
         .then(data => {
-            setData(data);
-            setLabel1(data[0].name);
-            setLabel2(data[0].description);
+            setData(data.technology);
+            setLabel1(data.technology[0].name);
+            setLabel2(data.technology[0].description);
         })
         .catch()
 
