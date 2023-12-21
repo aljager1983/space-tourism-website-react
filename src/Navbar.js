@@ -12,7 +12,7 @@ const Navbar = () => {
     const docHeight = document.documentElement.clientHeight;
     
     useEffect(() => {
-        if(docWidth >= 377) {
+        if(docWidth >= 413) {
             setNavStyle("flex");
             setBurgStyle("none");
         } else {
