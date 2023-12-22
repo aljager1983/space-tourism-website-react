@@ -30,7 +30,7 @@ const Technology = () => {
         })
 
         //setting portrait or landscape
-        if(docWidth >= 377) {
+        if(docWidth >= 415) {
             setWinSize("portrait");
             
         } else {
