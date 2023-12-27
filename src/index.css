@@ -395,6 +395,7 @@ body {
   
 }
 
+/* below is css for tablet size */
 @media screen and (min-width:415px) and (max-width:800px) {
 
   .home {
@@ -413,20 +414,13 @@ body {
   }
 
   .logo-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
   }
   
   .navbar {
-  
-    position: absolute;
     margin-top: 0rem;
-    background-color: hsla(244, 31%, 59%, 0.2);
     justify-content: space-between;
-    right: 0px;
-    -webkit-backdrop-filter: blur(5px); 
-    backdrop-filter: blur(5px);
-    z-index: 1;
     padding-right: 2rem;
     
   }
@@ -436,11 +430,7 @@ body {
   }
   
   .navitems {
-    display: flex;
-    flex-direction: row;
-    justify-content: none;
     letter-spacing: 3px;
-    color: #fff;
     text-decoration: none;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -455,7 +445,7 @@ body {
 
   #link-home {
     padding-left: 0rem;
-    margin-left: 10px;
+    margin-left: 2rem;
     
   }
   .navitems:hover {
@@ -488,7 +478,7 @@ body {
   }
   
   .home .left, .home .right {
-    width: 350px;
+    width: 450px;
     justify-content: center;
     align-items: center;
     gap:10px;
@@ -496,29 +486,29 @@ body {
 
   .home .right h3 {
     position: relative;
-    height: 130px;
-    width: 130px;
-    font-size: 1.2rem;
+    height: 230px;
+    width: 230px;
+    font-size: 2rem;
     bottom: 30px;
   }
 
   .sml-txt {
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: 2.5px;
     padding-top: 4rem;
   }
   
   .lg-txt {
-    font-size: 5rem;
+    font-size: 7rem;
   }
 
   .descripTxt {
     font-family: "Arial Narrow", Helvetica, sans-serif;
-      font-size: .85rem;
+      font-size: 1rem;
       line-height: 1.5rem;
       font-weight: 200;
       letter-spacing: .3px;
-      padding: 0rem 1rem;
+      padding: 1rem;
   }
 
   .destination {
