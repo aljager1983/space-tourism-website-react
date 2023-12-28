@@ -422,7 +422,7 @@ body {
     margin-top: 0rem;
     justify-content: space-between;
     padding-right: 2rem;
-    
+    z-index: 2;
   }
 
   .navitems .bold {
@@ -431,35 +431,15 @@ body {
   
   .navitems {
     letter-spacing: 3px;
-    text-decoration: none;
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-left: 0px;
-    font-size: 1rem;
   }
   
-  .navitems span {
-    font-weight: 200;
-    justify-content: space-between;
-  }
-
   #link-home {
     padding-left: 0rem;
     margin-left: 2rem;
     
-  }
-  .navitems:hover {
-    border-bottom: solid 2px white;
-    cursor: pointer;
-    padding-bottom: 0;
-  }
-  
-  .navitems .bold {
-    font-weight: bold;
-  }
-
-  .burger {
-    display: none;
   }
 
   .home, .destination, .crew, .technology {
@@ -470,46 +450,31 @@ body {
   }
 
   .right, .left{
-    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    flex-direction: column;
     margin: 0;
   }
   
   .home .left, .home .right {
     width: 450px;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
   }
 
-  .home .right h3 {
-    position: relative;
-    height: 230px;
-    width: 230px;
-    font-size: 2rem;
-    bottom: 30px;
-  }
 
   .sml-txt {
+    width: 90%;
+    text-align: center;
     font-size: 1.5rem;
     letter-spacing: 2.5px;
-    padding-top: 4rem;
+    padding: 10vh 0 0 0;
+    margin-left: 0;
   }
+  
   
   .lg-txt {
     font-size: 7rem;
   }
 
-  .descripTxt {
-    font-family: "Arial Narrow", Helvetica, sans-serif;
-      font-size: 1rem;
-      line-height: 1.5rem;
-      font-weight: 200;
-      letter-spacing: .3px;
-      padding: 1rem;
-  }
+  
 
   .destination {
     background-image: url("assets/destination/background-destination-tablet.jpg");
@@ -517,36 +482,22 @@ body {
   }
 
   .destination .preview {
-    height: 100px;
+    height: 300px;
     padding: 0;
   }
   
   .destination .name .lg-txt {
-    font-size: 5rem;
+    font-size: 7rem;
   }
-  .destination .sml-txt {
+  .destination .sml-txt, .crew .sml-txt, .technology .sml-txt {
     margin-bottom: 1rem;
+    text-align: left;
   }
   .destination .right {
-    padding: 2rem 1rem; 
-    width: 90%;
-    margin: 0;
+    padding: 3rem 0; 
+    width: 70%;
   }
   
-
-
-  .destination .links {
-    display: flex;
-    flex-direction: row;
-    justify-items: space-between;
-    gap: 1rem;
-  }
-  
-  .destination .links h2:hover {
-    border-bottom: 2px white solid;
-    margin-bottom: -2px;
-    cursor: pointer;
-  }
   
   .destination .descripTxt {
     width: 100%;
@@ -558,31 +509,19 @@ body {
     position: absolute;
     margin: 1rem 0 0rem 0;
     height: 0px;
-    width: 80%;
-    bottom: 20vh;
+    width: 60%;
+    bottom: 35vh;
   }
   
   .stats {
     position: absolute;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40%;
     width: 80%;
-    bottom: 10vh;
-  }
-  .stats .heading h2{
-    font-weight: 200;
-    font-size: 1rem;
-    letter-spacing: 2px;
+    bottom: 30vh;
   }
   
-  .stats .heading h3 {
-    font-family: var(--fs-noto);
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-  }
-
   .crew {
     background-image: url("assets/crew/background-crew-tablet.jpg");
     background-size: cover;
@@ -590,13 +529,7 @@ body {
 
   .role {
     padding: 0;
-    font-family: var(--fs-cormo-garamon);
-    font-weight: 200;
-    text-transform: uppercase;
-    color: grey;
-    font-size: 1.3rem;
-    letter-spacing: 0px;
-    margin-top: 55vh;
+    margin-top: 50px;
   }
   .preview {
     padding-left: 0;
@@ -605,14 +538,14 @@ body {
     font-family: var(--fs-cormo-garamon);
     text-transform: uppercase;
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding-bottom: 1rem;
   }
   
   .crew .descripTxt {
-    width: 85%;
+    width: 65%;
     margin-bottom: 0rem;
-    /* font-size:  */
+    font-size: 1rem;
   }
 
   .crew .left {
@@ -627,8 +560,8 @@ body {
   }
   .crew .preview {
     position: absolute;
-    bottom: 55%;
-    height: 40%;
+    bottom: 0;
+    height: 53%;
     /* below line starts the centering of image with position:absolute */
     left: 0;          
     right: 0;
@@ -643,22 +576,7 @@ body {
     width: auto;
     justify-content: space-evenly;
     align-items: flex-end;
-    bottom: 50vh;
-  }
-
-  .navDots div{
-    /* make them little circles */
-     display: flex;
-     flex-direction: row;
-     border-radius: 50%;
-     border: 1px solid grey;
-     width: 10px;
-     height: 10px;
-     background-color: grey;
- }
-  
-  .crew .sml-txt {
-    display: none;
+    bottom: max(60%, 65vh);
   }
   
   .technology {
@@ -666,36 +584,26 @@ body {
   }
   
   .technology .left {
-    width: 100%;
+    width: 90%;
   }
   
   .technology .left .details {
     display: flex;
     flex-direction: column;
-    padding-top: 30%;
+    padding-top: 115%;
+    
   }
   
-  .sub-details h1 {
-    font-size: 1rem;
-    font-weight: 200;
-    letter-spacing: 2px;
-    padding-top: 1rem; 
-  }
   
   .sub-details h2 {
     padding: 0rem 0 1.5rem 0;
-    font-family: var(--fs-cormo-garamon);
     font-size: 2rem;
-    font-weight: 100;
-    text-transform: uppercase;
   }
   
   .navNumDots {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 35px;
-    border-color: yellow;
   }
   .navNumDots h2{
     display: flex;
@@ -704,38 +612,25 @@ body {
     border: 1px solid grey;
     width: 40px;
     height: 40px;
-    color: grey;
-    text-align: center;
     border-radius: 50%;
     margin-right:  0rem ;
   }
   
-  .navNumDots h2:hover, .navNumDots h2:focus {
-    cursor: pointer;
-    background-color: #fff;
-    color: #000
-  }
   
   .technology .preview {
     position: absolute;
     right: 0;
-    bottom: 70%;
-    height: 15%;
+    bottom: 25%;
+    width: 100%;
     /* below lines is for centering the image */
-    left: 0;          
-    right: 0;
-    margin-left: auto;
-    margin-right: auto
+    
   }
   
-  .technology .details {
-    height: 250px;
-  }
-  
+   
 
 }
   
-
+/* for mobile */
 @media screen and (max-width:413px) {
 
   .logo {
@@ -1069,9 +964,4 @@ body {
     margin-right: auto
   }
   
-  .technology .details {
-    height: 250px;
-  }
-  
-
-}
+   }
