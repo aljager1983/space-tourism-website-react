@@ -20,7 +20,7 @@ const Destination = () => {
     };
     useEffect(() => {
         const getData = () => {
-        fetch('data.json')
+        fetch('https://aljager1983.github.io/data.json')
         .then(res => {
         if(!res.ok){        //error throwing
             throw Error('could not fetch the data for that resource');
