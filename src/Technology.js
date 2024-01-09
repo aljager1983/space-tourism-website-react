@@ -9,7 +9,6 @@ const Technology = () => {
     const [label1, setLabel1] = useState();
     const [label2, setLabel2] = useState();
     const docWidth = document.documentElement.clientWidth;
-    const docHeight = document.documentElement.clientHeight;
 
     useEffect(() => {
         fetch('data.json')

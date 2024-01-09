@@ -8,8 +8,7 @@ const Destination = () => {
     const [destinationDistance, setDDistance] = useState();
     const [destinationTraveTime, setDTravelTime] = useState();
     const [planet, setPlanet] = useState("moon");
-    // const [img, setImg] = useState("./assets/destinations/image-moon/png");
-    // const [isPending, setIsPending] = useState(true);
+
     const con = (e) => {
         const d = destinationsData[e.target.id];
         const dname = d.name;
