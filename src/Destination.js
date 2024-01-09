@@ -20,7 +20,7 @@ const Destination = () => {
     };
     useEffect(() => {
         const getData = () => {
-        fetch('data.json')
+        fetch("http://localhost:8000/destinations")
         .then(res => {
         if(!res.ok){        //error throwing
             throw Error('could not fetch the data for that resource');
@@ -28,11 +28,11 @@ const Destination = () => {
           return  res.json();
         })
         .then(data => {
-            setDestinationsData(data.destinations);
-            setDName(data.destinations[0].name);
-            setDDescrip(data.destinations[0].description);
-            setDDistance(data.destinations[0].distance);
-            setDTravelTime(data.destinations[0].travel);
+            setDestinationsData(data);
+            setDName(data[0].name);
+            setDDescrip(data[0].description);
+            setDDistance(data[0].distance);
+            setDTravelTime(data[0].travel);
             // setIsPending(false);
         })
         .catch(err => {
