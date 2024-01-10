@@ -33,6 +33,7 @@ const Destination = () => {
             setDDescrip(data.destinations[0].description);
             setDDistance(data.destinations[0].distance);
             setDTravelTime(data.destinations[0].travel);
+            console.log("data has been loaded");
             // setIsPending(false);
         })
         .catch(err => {
