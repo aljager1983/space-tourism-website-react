@@ -19,7 +19,7 @@ const Crew = () => {
     }
     useEffect(() => {
         const getData = () => {
-        fetch('http://localhost:8000/crew')
+        fetch('https://raw.githubusercontent.com/aljager1983/space-tourism-website-react/master/public/data.json')
         .then(res => {
         if(!res.ok){        //error throwing
             throw Error('could not fetch the data for that resource');
@@ -30,10 +30,10 @@ const Crew = () => {
         })
         .then(data => {
             // console.log(data);
-            setData(data);
-            setLabel1(data[0].role);
-            setLabel2(data[0].name);
-            setLabel3(data[0].bio);
+            setData(data.crew);
+            setLabel1(data.crew[0].role);
+            setLabel2(data.crew[0].name);
+            setLabel3(data.crew[0].bio);
             
         })
         .catch(err => {
