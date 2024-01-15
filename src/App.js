@@ -7,11 +7,11 @@ import Technology from "./Technology";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/space-tourism-website-react"> 
     <div className="App">
       <Navbar />
       <div className="content">
-        <Routes>
+        <Routes >
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<Crew />} />

@@ -10,7 +10,7 @@ const Crew = () => {
     
     
     useEffect(() => {
-        const getData = () => {
+        
         fetch('https://raw.githubusercontent.com/aljager1983/space-tourism-website-react/master/public/data.json')
         .then(res => {
         if(!res.ok){        //error throwing
@@ -30,10 +30,10 @@ const Crew = () => {
         })
         .catch(err => {
             console.log(err.message);
-        })}
-        return () => getData(); //no duplicate mounting
+        })
+        
     }, []);
-    
+
     const call = (e) => {
         const callId = e.target.id;
         const index = e.target.tabIndex;

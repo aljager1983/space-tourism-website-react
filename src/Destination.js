@@ -11,7 +11,7 @@ const Destination = () => {
 
     
     useEffect(() => {
-        const getData = () => {
+        
         fetch('https://raw.githubusercontent.com/aljager1983/space-tourism-website-react/master/public/data.json')
         .then(res => {
         if(!res.ok){        //error throwing
@@ -30,8 +30,8 @@ const Destination = () => {
         .catch(err => {
             // setIsPending(true);
             console.log(err.message);
-        })}
-        return () => getData();  //no duplicate mounting
+        })
+        
     }, []);
 
     const con = (e) => {
