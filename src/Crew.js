@@ -8,15 +8,7 @@ const Crew = () => {
     const [label3, setLabel3] = useState();      //bio
     
     
-    const call = (e) => {
-        const callId = e.target.id;
-        const index = e.target.tabIndex;
-        setImagePrev(callId);
-        setLabel1(data[index].role);
-        setLabel2(data[index].name);
-        setLabel3(data[index].bio);
     
-    }
     useEffect(() => {
         const getData = () => {
         fetch('https://raw.githubusercontent.com/aljager1983/space-tourism-website-react/master/public/data.json')
@@ -41,6 +33,16 @@ const Crew = () => {
         })}
         return () => getData(); //no duplicate mounting
     }, []);
+    
+    const call = (e) => {
+        const callId = e.target.id;
+        const index = e.target.tabIndex;
+        setImagePrev(callId);
+        setLabel1(data[index].role);
+        setLabel2(data[index].name);
+        setLabel3(data[index].bio);
+    
+    }
 
     return ( 
         <div className="crew">

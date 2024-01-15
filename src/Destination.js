@@ -9,16 +9,7 @@ const Destination = () => {
     const [destinationTraveTime, setDTravelTime] = useState();
     const [planet, setPlanet] = useState("moon");
 
-    const con = (e) => {
-        const d = destinationsData[e.target.id];
-        const dname = d.name;
-        setPlanet(dname.toLowerCase());
-        setDName(dname);
-        setDDescrip(d.description);
-        setDDistance(d.distance);
-        setDTravelTime(d.travel);
-        console.log(d);
-    };
+    
     useEffect(() => {
         const getData = () => {
         fetch('https://raw.githubusercontent.com/aljager1983/space-tourism-website-react/master/public/data.json')
@@ -42,6 +33,17 @@ const Destination = () => {
         })}
         return () => getData();  //no duplicate mounting
     }, []);
+
+    const con = (e) => {
+        const d = destinationsData[e.target.id];
+        const dname = d.name;
+        setPlanet(dname.toLowerCase());
+        setDName(dname);
+        setDDescrip(d.description);
+        setDDistance(d.distance);
+        setDTravelTime(d.travel);
+        console.log(d);
+    };
     
     return ( 
         <div className="destination">
