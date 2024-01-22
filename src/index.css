@@ -400,12 +400,9 @@ body {
 
   .home {
     background-image: url("assets/home/background-home-tablet.jpg");
-    background-size: cover;
   }
 
   .logo {
-    display: flex;
-    position: absolute;
     padding: 2rem;
   }
 
@@ -413,17 +410,12 @@ body {
     display: none;
   }
 
-  .logo-icon {
-    height: 3rem;
-    width: 3rem;
-  }
-  
   .navbar {
     margin-top: 0rem;
     justify-content: space-between;
     padding-right: 2rem;
-    z-index: 2;
     width: max(55vw, 400px);
+    z-index: 2;
   }
 
   .navitems .bold {
@@ -431,21 +423,18 @@ body {
   }
   
   .navitems {
-    letter-spacing: 3px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-left: 0px;
   }
   
   #link-home {
-    padding-left: 0rem;
     margin-left: 2rem;
     
   }
 
   .home {
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     align-items: center;
   }
@@ -466,31 +455,19 @@ body {
     width: 450px;
     margin: 3vh;
   }
-
   
   .sml-txt {
     width: 90%;
-    text-align: center;
-    font-size: 1.5rem;
     letter-spacing: 2.5px;
     padding: min(15vh, 6rem) 0 0 0;
-    margin-left: 0;
   }
-
-  .home .sml-txt {
-    padding-top: 3rem;
-  }
-  
-  
 
   .destination {
     background-image: url("assets/destination/background-destination-tablet.jpg");
-    background-size: cover;
   }
 
   .destination .preview {
     height: 35vw;
-    padding: 0;
   }
   
   .destination .name .lg-txt {
@@ -501,33 +478,24 @@ body {
     text-align: left;
   }
   .destination .right {
-    padding: 3rem 0; 
     width: 70%;
   }
   
-  
   .destination .descripTxt {
     width: 100%;
-    padding: 0rem;
-    text-align: center;
   }
   
   .hr-divider {
     margin: 1rem 0;
     width: 95%;
-    bottom: 35vh;
   }
   
   .stats {
-    display: flex;
-    justify-content: center;
-    gap: 40%;
     width: 100%;
   }
   
   .crew {
     background-image: url("assets/crew/background-crew-tablet.jpg");
-    background-size: cover;
   }
 
   .role {
@@ -538,32 +506,12 @@ body {
     padding-left: 0;
   }
   .crew .name {
-    font-family: var(--fs-cormo-garamon);
-    text-transform: uppercase;
-    font-weight: 200;
+    
     font-size: 2.5rem;
     padding-bottom: 1rem;
   }
   
-  .crew .descripTxt {
-    width: 65%;
-    margin-bottom: 0rem;
-    font-size: 1rem;
-  }
-
-  .crew .left {
-    position: absolute;
-    padding-top: 0;
-    height: 100vh;
-  }
-  .crew .right {
-    display: flex;
-    flex-direction: row;
-   
-  }
   .crew .preview {
-    position: absolute;
-    bottom: 0;
     height: clamp(30vh, 40vh, 50vh);
     /* below line starts the centering of image with position:absolute */
     left: 0;          
@@ -571,10 +519,10 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  
   .navDots {
     gap: 40px;
     width: auto;
-    align-items: flex-end;
     bottom: 45%;
   }
   
@@ -629,8 +577,6 @@ body {
         
   }
   
-   
-
 }
   
 /* for mobile */
