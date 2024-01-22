@@ -45,6 +45,12 @@ body {
   z-index: 1;
 }
 
+.docWidth {
+  position: absolute;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
 .navbar {
   
   position: absolute;
@@ -388,8 +394,9 @@ body {
   
 }
 
-/* below is css for tablet size */
+/* below is css for tablet size, e.g.800x1280 and 602x777 for xanders tablet */
 @media screen and (min-width:415px) and (max-width:800px) {
+
 
   .home {
     background-image: url("assets/home/background-home-tablet.jpg");
@@ -416,6 +423,7 @@ body {
     justify-content: space-between;
     padding-right: 2rem;
     z-index: 2;
+    width: max(55vw, 400px);
   }
 
   .navitems .bold {
@@ -435,7 +443,13 @@ body {
     
   }
 
-  .home, .destination, .crew, .technology {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .destination, .crew, .technology {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -450,23 +464,23 @@ body {
   
   .home .left, .home .right {
     width: 450px;
+    margin: 3vh;
   }
 
-
+  
   .sml-txt {
     width: 90%;
     text-align: center;
     font-size: 1.5rem;
     letter-spacing: 2.5px;
-    padding: 10vh 0 0 0;
+    padding: min(15vh, 6rem) 0 0 0;
     margin-left: 0;
   }
-  
-  
-  .lg-txt {
-    font-size: 7rem;
-  }
 
+  .home .sml-txt {
+    padding-top: 3rem;
+  }
+  
   
 
   .destination {
@@ -475,12 +489,12 @@ body {
   }
 
   .destination .preview {
-    height: 300px;
+    height: 35vw;
     padding: 0;
   }
   
   .destination .name .lg-txt {
-    font-size: 7rem;
+    font-size: max(6rem, 7vh);
   }
   .destination .sml-txt, .crew .sml-txt, .technology .sml-txt {
     margin-bottom: 1rem;
@@ -499,20 +513,16 @@ body {
   }
   
   .hr-divider {
-    position: absolute;
-    margin: 1rem 0 0rem 0;
-    height: 0px;
-    width: 60%;
+    margin: 1rem 0;
+    width: 95%;
     bottom: 35vh;
   }
   
   .stats {
-    position: absolute;
     display: flex;
     justify-content: center;
     gap: 40%;
-    width: 80%;
-    bottom: 30vh;
+    width: 100%;
   }
   
   .crew {
@@ -522,7 +532,7 @@ body {
 
   .role {
     padding: 0;
-    margin-top: 50px;
+    margin-top: 5vh;
   }
   .preview {
     padding-left: 0;
@@ -554,7 +564,7 @@ body {
   .crew .preview {
     position: absolute;
     bottom: 0;
-    height: 53%;
+    height: clamp(30vh, 40vh, 50vh);
     /* below line starts the centering of image with position:absolute */
     left: 0;          
     right: 0;
@@ -562,14 +572,10 @@ body {
     margin-right: auto;
   }
   .navDots {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     width: auto;
-    justify-content: space-evenly;
     align-items: flex-end;
-    bottom: max(60%, 65vh);
+    bottom: 45%;
   }
   
   .technology {
@@ -577,19 +583,22 @@ body {
   }
   
   .technology .left {
-    width: 90%;
+    position: absolute;
+    width: 95%;
+    height: 100vh;
   }
-  
+
   .technology .left .details {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    padding-top: 115%;
-    
+    bottom: 0px;
   }
+  
   
   
   .sub-details h2 {
-    padding: 0rem 0 1.5rem 0;
+    padding: 0 0 1rem 0;
     font-size: 2rem;
   }
   
@@ -597,6 +606,7 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 35px;
+    height: 20%;
   }
   .navNumDots h2{
     display: flex;
@@ -610,13 +620,13 @@ body {
   }
   
   
+  
   .technology .preview {
     position: absolute;
-    right: 0;
-    bottom: 25%;
+    bottom: 33%;
     width: 100%;
-    /* below lines is for centering the image */
-    
+    height: 50%;
+        
   }
   
    
