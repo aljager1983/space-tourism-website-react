@@ -34,7 +34,7 @@ const Navbar = () => {
     
     return ( 
         <div>
-            <div className='docWidth'>{docWidth}x{docHeight}</div>
+            {/* <div className='docWidth'>{docWidth}x{docHeight}</div> */}
             <div className="logo">
                 <img src={logo} alt="star-logo" className="logo-icon" />  
                 <hr className="hr-nav"/>
